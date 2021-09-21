@@ -5,6 +5,31 @@ var apiKey = "7978c91d365042ba95b523c7b119ac7c";
 //Will store searched games in this
 var searchedGames;
 
+// This function will be used for getting API url to show current game based on search input
+// Having troubles getting the correct syntax from the object.
+function recoGames(game) {
+    var queryUrl = `https://api.rawg.io/api/games?search=${game}&key=7978c91d365042ba95b523c7b119ac7c`// This URL pulls up object of games
+    
+    $.ajax({
+        url: queryUrl,
+        method: "GET"
+    }).then(function(gameResponse){
+        console.log(gameResponse);
+        $("#sug-games").empty();
+
+        var gameInfo = gameResponse.results[0].short_screenshots;
+        var currentGame = $(`
+        <h2 id = "currentGame">
+            ${gameResponse.results} <img src="${gameInfo}" /> </h2>
+        `);
+        $("#current-game").append(currentGame);
+
+
+    })
+
+
+
+    }
 
 
 
@@ -19,11 +44,11 @@ var searchedGames;
 //event listener for the search button
 $("#search-button").on("click",function(event){
     event.preventDefault();
-    var gameSearch = $("#search").val().trim();
-    recoGames(gameSearch);
-    if(!searchedGames.includes(gameSearch)) {
-        searchedGames.push(gameSearch);
-        var gameInput = $(`<li class = "list-group-item row background">${gameSearch}</li>`);
+    var games = $("#search").val().trim();
+    recoGames(games);
+    if(!searchedGames.includes(games)) {
+        searchedGames.push(games);
+        var gameInput = $(`<li class = "list-group-item row background">${games}</li>`);
         $("#search-list").append(gameInput);
     };
     localStorage.setItem("searched-game", JSON.stringify(searchedGames));
