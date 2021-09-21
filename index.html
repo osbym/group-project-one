@@ -3,14 +3,51 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>Game Recommendation</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href ="assets/css/style.css"/>
   </head>
   <body>
-      
+    <div class ="container">
+        <header class="columns">
+            <div class="column is-full has-text-centered">
+                <h1 class="title is-1 has-background-black-ter has-text-danger">Game Recommendation Generator</h1>
+            </div>
+        </header>
+    </div>
+    
+    <main class="container p-6">
+        <section class="colums is-flex is-flex-wrap-wrap">
+            <div class="column is-3">
+                <!--Input Form Will Go here-->
+            <input class="input" type="text" placeholder="Enter Game Title Here" id="search">
+            <button class="button is-danger" type="button" id="search-button">
+                <i class="fa fa-search"></i>
+            </button>
+    
+    
+            </div>
+    
+            <div class="column is-7 has-text-centered" id="search-list">
+                <!--Will be current selected game-->
+            </div>
+            <div class="column is-3" id="sug-games">
+                <!--Will be list of suggested games-->
+            </div>
+            <div class="column is-9" id="current-game">
+                <!--Will be info about current selected game-->
+            </div>
+        </section>
+    </main>
+    
+    <footer class="columns">
+        <div class="column is full">
+            <!--footer info here, could put links or whatever-->
+        </div>
+    </footer>
+    
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!--NEED TO USE A DIFF LIBRARY THEN MOMENT.JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
