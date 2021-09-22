@@ -1,7 +1,7 @@
 //moment.js for current day
 var today = moment().format('l');
 //Acces to API
-var apiKey = "7978c91d365042ba95b523c7b119ac7c";
+var apiKey = "2656d25b0fe94a009f4b06c9e8bc55c8";
 //Will store searched games in this
 var searchedGames;
 
@@ -16,7 +16,7 @@ if (JSON.parse(localStorage.getItem("searched-game"))) {
 // Having troubles getting the correct syntax from the object.
 function currentGameInfo(game) {
     // This URL pulls up object of searched game
-    var queryUrl = `https://api.rawg.io/api/games?search=${game}&key=7978c91d365042ba95b523c7b119ac7c`
+    var queryUrl = `https://api.rawg.io/api/games?search=${game}&key=2656d25b0fe94a009f4b06c9e8bc55c8`
     
     $.ajax({
         url: queryUrl,
@@ -24,14 +24,23 @@ function currentGameInfo(game) {
     }).then(function(gameResponse){
         console.log(gameResponse);
         $("#sug-games").empty();
+
+
+        
     // need to get the object to append what info we want to show on page
-    // this is pulling up 404 so need the correct info
-        var gameInfo = gameResponse.results[0].short_screenshots[0];
-        var currentGame = $(`
-        <h2 id = "currentGame">
-            ${gameResponse.results}"${gameInfo}" /> </h2>
+        // need to use loop and parse through object to display whats needed
+        var gameInfo = gameResponse.results;
+        for (i = 0; i < gameInfo.length; i++) {
+        console.log(gameInfo[i].name);
+        
+        }
+        var gameInfoURL = `https://api.rawg.io/api/games?results=${game}&key=2656d25b0fe94a009f4b06c9e8bc55c8`;
+        var currentGameP = $(`
+        <p id = "currentGame">
+            ${JSON.stringify(gameResponse.results)}"${gameInfo}" ${gameInfoURL}/> </p>
         `);
-        $("#current-game").append(currentGame);
+        $("#current-game").append(currentGameP);
+        console.log(gameInfo);
 
 
     })
@@ -57,9 +66,10 @@ $("#search-button").on("click",function(event){
     currentGameInfo(games);
     if(!searchedGames.includes(games)) {
         searchedGames.push(games);
-        var gameInput = $(`<h3 class = "has-background-danger ">${games}</h3>`);
+        var gameInput = $(`<h3 class = "has-background-danger">${games}</h3>`);
         $("#search-list").append(gameInput);
     };
     localStorage.setItem("searched-game", JSON.stringify(searchedGames));
     console.log(searchedGames);
+    
 });
