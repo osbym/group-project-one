@@ -8,7 +8,7 @@ var searchedGames;
 //gets any local stored info and if nothing it saves searchedGames in an object.
 if (JSON.parse(localStorage.getItem("searched-game"))) {
     searchedGames = JSON.parse(localStorage.getItem("searched-game"))
-} else {
+}else {
     searchedGames = []
 }
 
@@ -17,7 +17,7 @@ if (JSON.parse(localStorage.getItem("searched-game"))) {
 function currentGameInfo(game) {
     // This URL pulls up object of searched game
     var queryUrl = `https://api.rawg.io/api/games?search=${game}&key=2656d25b0fe94a009f4b06c9e8bc55c8`
-
+    
     $.ajax({
         url: queryUrl,
         method: "GET"
@@ -100,12 +100,12 @@ $("#search-button").on("click", function (event) {
     event.preventDefault();
     var games = $("#search").val().trim();
     currentGameInfo(games);
-    if (!searchedGames.includes(games)) {
+    if(!searchedGames.includes(games)) {
         searchedGames.push(games);
         var gameInput = $(`<h3 class = "has-background-danger">${games}</h3>`);
         $("#search-list").append(gameInput);
     };
     localStorage.setItem("searched-game", JSON.stringify(searchedGames));
     console.log(searchedGames);
-
+    
 });
