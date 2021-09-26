@@ -9,9 +9,8 @@
 }
 
 .card {
-    max-width: 33%;
+    max-width: 60%;
+    margin-top: 15px;
+    margin-right: 15px;
 }
 
-#sug-games {
-width:  100%;
-}
