@@ -1,16 +1,44 @@
-GROUP-PROJECT-ONE
+# VIDEOGAME RECOMMENDER
 
-User Story:
+## **Table of Contents:**
+---
+- User story
+- Description
+- Built with
+- How to use
+- Screenshot/GIF
+- Collaborators
+- Additional Questions
 
+## **User Story:**
+---
 As a video game enthusiast I'd like a game generator base off of search criteria.
 
-Acceptance Criteria:
+## **Description:**
+---
+Our videogame recommender is a search engine that will help you find the next videogame to play. It's intended to help with the struggle of having too many options, and to avoid stress from having to pick the right game.
 
-When I choose what game I'd like to see
-Then I'm presented with that current selected game information.
+## **Build With:**
+---
+- JS
+- HTML
+- CSS
+- Bulma
+- Awesome Font
+- RAWG API
 
-When I choose what game I'd like to see 
-Then I'm presented with related games that possibly would interest me.
+## **How to Use:**
+---
+Enter the game you just finished or played into the search bar. Clock on the shearch button. And a list of recommended games will be displayed.
+## **Screenshots/GIF:**
+---
+![Demo](Demo-Screenshot.png)
+## **Collaborators:**
+---
+- [Marcus Osby](https://github.com/osbym)
+- [Jordan Hackworth](https://github.com/HacAtac)
+- [Eduardo Ramirez](https://github.com/EduardoRam7)
 
-When I decide which game I'd potentially like to play
-Then I can save the game on webpage.
+## **Additional Questions:**
+---
+If you have any questions about the project or would like to contact us, please reach out through GitHub.
