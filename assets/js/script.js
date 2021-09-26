@@ -109,6 +109,10 @@ function gameGiveawayApi() {
                 console.log(giveAway.instructions);
                 htmlCODE += 
                     `<div class="card">
+                    <article class="panel is-info">
+                    <p class="panel-heading">
+                    Game giveaways!
+                    </p>
                     <div class="card-image">
                         <figure class="image is-4by3">
                         <img src="${giveAway.image}" height=100 width=50 alt="Placeholder image">
