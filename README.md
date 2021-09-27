@@ -35,7 +35,7 @@ Enter the game you just finished or played into the search bar. Clock on the she
 ![Demo](Demo-Screenshot.png)
 ## **Collaborators:**
 ---
-- [Marcus Osby](https://github.com/osbym)
+- [Marcus Osby](https://osbym.github.io/module2-challenge-portfolio/)
 - [Jordan Hackworth](https://github.com/HacAtac)
 - [Eduardo Ramirez](https://github.com/EduardoRam7)
 
