@@ -36,12 +36,12 @@ https://osbym.github.io/videogame-recommender/
 As a video game enthusiast I'd like a game generator base off of search criteria.
 
 ## **Description:**
----
+
 Our videogame recommender is a search engine that will help you find the next videogame to play. It's intended to help with the struggle of having too many options, and to avoid stress from having to pick the right game.
 
 ## **How to Use:**
----
-Enter the game you just finished or played into the search bar. Clock on the shearch button. And a list of recommended games will be displayed.
+
+Enter the game you just finished or played into the search bar. Click on the shearch button. And a list of recommended games will be displayed.
 
 ## **Screenshot/GIF:**
 ---
@@ -59,3 +59,4 @@ Then I can save the game on webpage.
 
 - All searches locally stored
 
+- Displays cool live giveways
