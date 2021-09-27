@@ -2,11 +2,11 @@
 
 ## Developed by:
 
-- Jordan Hackworth
+- [Jordan Hackworth](https://github.com/HacAtac)
 
-- Marcus Osby
+- [Marcus Osby](https://osbym.github.io/module2-challenge-portfolio/)
 
-- Eduardo Ramirez
+- [Eduardo Ramirez](https://github.com/EduardoRam7)
 
 #### Deployed Application
 https://osbym.github.io/videogame-recommender/
@@ -22,6 +22,9 @@ https://osbym.github.io/videogame-recommender/
     
   - Bulma
 
+  - Awesome Font
+
+  
   2. APIs
   
   - RAWG
@@ -32,13 +35,18 @@ https://osbym.github.io/videogame-recommender/
 
 As a video game enthusiast I'd like a game generator base off of search criteria.
 
-## Acceptance Criteria:
+## **Description:**
+---
+Our videogame recommender is a search engine that will help you find the next videogame to play. It's intended to help with the struggle of having too many options, and to avoid stress from having to pick the right game.
 
-When I choose what game I'd like to see
-Then I'm presented with that current selected game information.
+## **How to Use:**
+---
+Enter the game you just finished or played into the search bar. Clock on the shearch button. And a list of recommended games will be displayed.
 
-When I choose what game I'd like to see 
-Then I'm presented with related games that possibly would interest me.
+## **Screenshot/GIF:**
+---
+![Demo](Demo-Screenshot.png)
+
 
 When I decide which game I'd potentially like to play
 Then I can save the game on webpage.
@@ -51,6 +59,3 @@ Then I can save the game on webpage.
 
 - All searches locally stored
 
-## Image: 
-
-![image](https://user-images.githubusercontent.com/87884472/134828920-d9de7928-4f6b-449c-a272-6daa4178bf81.png)
